@@ -53,7 +53,7 @@ mkdir -p Downloads
 
 #Download required install scripts
 wget https://github.com/yanghoeg/Termux_XFCE/raw/main/xfce.sh
-wget https://github.com/yanghoeg/Termux_XFCE/raw/main/proot.sh
+wget https://github.com/lufepoh/Termux_XFCE/raw/main/proot.sh
 wget https://github.com/yanghoeg/Termux_XFCE/raw/main/utils.sh
 wget https://github.com/yanghoeg/Termux_XFCE/raw/main/etc.sh
 wget https://github.com/yanghoeg/Termux_XFCE/raw/main/temp_background.sh

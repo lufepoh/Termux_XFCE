@@ -28,8 +28,8 @@ echo ""
 read -r -p "사용자 이름(id)을 입력하세요.: " username </dev/tty
 
 termux-change-repo
-pkg update -y -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--allow-downgrades"
-pkg upgrade -y -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--allow-downgrades"
+pkg update -y -o APT::Get::AllowDowngrades=true -o Dpkg::Options::="--force-confold"
+pkg upgrade -y -o APT::Get::AllowDowngrades=true -o Dpkg::Options::="--force-confold"
 sed -i 's/# allow-external-apps = true/allow-external-apps = true/g' /data/data/com.termux/files/home/.termux/termux.properties
 
 # Display a message 
@@ -45,7 +45,7 @@ pkgs=('wget' 'ncurses-utils' 'dbus' 'proot-distro' 'x11-repo' 'tur-repo' 'pulsea
 
 pkg uninstall dbus -y
 pkg update
-pkg install "${pkgs[@]}" -y -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--allow-downgrades"
+pkg install "${pkgs[@]}" -y -o APT::Get::AllowDowngrades=true -o Dpkg::Options::="--force-confold"
 
 #Create default directories
 mkdir -p Desktop
